@@ -33,9 +33,9 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
 
-        var jwt = authService.generateJWT(email, password);
+        var jwt = authService.generateJWT(user.get());
         return ResponseEntity
-                .status(HttpStatus.CREATED)
+                .status(HttpStatus.OK)
                 .contentType(MediaType.TEXT_PLAIN)
                 .body(jwt);
     }

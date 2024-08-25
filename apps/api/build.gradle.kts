@@ -20,10 +20,14 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("io.jsonwebtoken:jjwt-api:0.12.6")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	testImplementation("org.springframework.security:spring-security-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	runtimeOnly("com.mysql:mysql-connector-j")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	runtimeOnly("com.mysql:mysql-connector-j")
+	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.12.6")
+	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.12.6")
 }
 
 tasks.withType<Test> {
