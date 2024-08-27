@@ -12,6 +12,9 @@ public class Snippet {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(name = "title")
+    private String title;
+
     @Column(name = "content")
     private String content;
 
@@ -40,5 +43,13 @@ public class Snippet {
 
     public void setTags(String tags) {
         this.tags = tags;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
