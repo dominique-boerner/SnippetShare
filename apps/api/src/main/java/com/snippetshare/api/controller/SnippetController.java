@@ -32,6 +32,7 @@ public class SnippetController {
             var snippet = new Snippet();
             snippet.setContent(createSnippetDto.getContent());
             snippet.setTags(createSnippetDto.getTags());
+            snippet.setTitle(createSnippetDto.getTitle());
             var createdSnippet = snippetRepository.save(snippet);
             return new ResponseEntity<>(createdSnippet, HttpStatus.CREATED);
         } catch (Exception e) {

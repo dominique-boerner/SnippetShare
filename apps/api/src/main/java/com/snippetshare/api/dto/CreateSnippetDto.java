@@ -1,6 +1,7 @@
 package com.snippetshare.api.dto;
 
 public class CreateSnippetDto {
+    private String title;
     private String content;
     private String tags;
 
@@ -18,5 +19,13 @@ public class CreateSnippetDto {
 
     public void setTags(String tags) {
         this.tags = tags;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
